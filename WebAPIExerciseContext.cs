@@ -14,6 +14,22 @@ namespace WebAPIExercise.Data
 
         public DbSet<Comment> Comments { get; set; }
 
+        /* 
+        protected override void OnModelCreating(ModelBuilder builder){
+            builder.Entity<CustomerAddress>()
+            .HasKey(ca => new {ca.CustomerId, ca.AddressId});
+            builder.Entity<CustomerAddress>()
+            .HasOne(ca=> ca.Customer).WithMany(ca=>ca.CustomerAddresses)
+            .HasForeignKey(ca=> ca.CustomerId);
+            builder.Entity<CustomerAddress>()
+            .HasOne(ca=>ca.Address).WithMany(ca=>ca.CustomerAddresses)
+            .HasForeignKey(ca=> ca.AddressId);
+        }
+        */
+
+
+
+
     }
 
 

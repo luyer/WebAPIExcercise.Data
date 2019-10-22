@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebAPIExercise.Data.Models
@@ -15,5 +16,9 @@ namespace WebAPIExercise.Data.Models
          
          [MaxLength(15)]
          public string Autor { get; set; }
+
+        public List<Comment> Comments { get; } = new List<Comment>();
+        
+
     }
 }
